@@ -6,12 +6,12 @@
   color:gold;
 }
 
-.main {
+body {
   background-color: gray;
 
 }
 
 .mid {
   display: flex;
-  align-content: center;
+  justify-content: center;
 }
