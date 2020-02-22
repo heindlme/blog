@@ -13,5 +13,9 @@ body {
 
 .mid {
   text-align: center;
-  font-style: san-serif;
+  font-family: san-serif;
+}
+
+.h {
+  font-family: sans-serif;
 }
