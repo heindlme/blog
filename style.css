@@ -19,3 +19,8 @@ body {
 .h {
   font-family: sans-serif;
 }
+
+.dog {
+  display: flex;
+  justify-content: space-around;
+}
