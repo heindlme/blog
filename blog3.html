@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Flexbox vs. Grid</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+  <h3>Which is better, Flexbox or CSS Grid?</h3>
+  <p>
+    For starters, Flexbox is flat, while Grid is made for two dimensions. Flexbox is based in the content and Grid
+    focuses on the layout. Grid has predefined grid places for each item to go into, while Flexbox is much more, well,
+    flexible. Although each can be used to do what the other does, flexbox can create two-dimensional layouts with
+    wrapping and Grid can make one-dimensional layouts. Since grid is better for precisiously placing objects with
+    properites like
+    grid-template rows and grid-template columns, it is better for creating unusal layouts, such as broken,
+    asymmetrical, and overlapping layouts.
+    CSS Grid is currently supported by 93.88% of browsers and Flexbox is supported on 97.33% of all browsers.
+    They are both supported most everywhere at this point.
+  </p>
+  <p>
+    A major difference is that grid has a gap property to create space between the grid items. In flexbox, there is no
+    easy way
+    to do that, but a few roundabout ways. While grid and flexbox can both be used for most tasks, there is usally one
+    that should
+    be used over the other. Flexbox uses flex-grow and flex-shrink to stretch and squeeze into the available space,
+    while grid
+    uses a combination of minmax and auto-fill functions inside the grid-template-columns property. They are each
+    designed to solve
+    their own problems.
+  </p>
+  <p>
+    I will make the same navigation bar using both types to see the differences between them.
+  </p>
+  <h4>Flexbox</h4>
+  <div class="flex-root">
+    <div class="flex">Home</div>
+    <div class="flex">Search</div>
+    <div class="flex" id="flex-end">Logout</div>
+  </div>
+  <p>
+    The code for Flexbox is :<br>
+    .flex-root {<br>
+    display: flex;<br>
+    background-color: mistyrose;<br>
+    justify-content: space-between;<br>
+    }<br>
+
+    .flex {<br>
+    padding-right: 7%;<br>
+    }<br>
+
+    #flex-end {<br>
+    margin-left: auto;<br>
+    }<br>
+  </p>
+  <h4>Grid</h4>
+  <div class="grid-root">
+    <div>Home</div>
+    <div>Search</div>
+    <div id="grid-end">Logout</div>
+  </div>
+  <p>
+    The code for Flexbox is :<br>
+    .grid-root {<br>
+    background-color: mistyrose;<br>
+    display: grid;<br>
+    grid-template-columns: repeat(10, 1fr);<br>
+    }<br>
+
+    #grid-end {<br>
+    grid-column: 10;<br>
+    }
+  </p>
+  <p>Sources: <a href="https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf"
+      target="_blank">1</a>, <a
+      href="https://webdesign.tutsplus.com/articles/flexbox-vs-css-grid-which-should-you-use--cms-30184"
+      target="_blank">2</a>, <a href="https://www.webdesignerdepot.com/2018/09/grid-vs-flexbox-which-should-you-choose/"
+      target="_blank">3</a>
+  </p>
+</body>
+
+</html>

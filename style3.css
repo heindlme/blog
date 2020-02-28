@@ -1,0 +1,23 @@
+.flex-root {
+  display: flex;
+  background-color: mistyrose;
+  justify-content: space-between;
+}
+
+.flex {
+  padding-right: 7%;
+}
+
+#flex-end {
+  margin-left: auto;
+}
+
+.grid-root {
+  background-color: mistyrose;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+#grid-end {
+  grid-column: 10;
+}
