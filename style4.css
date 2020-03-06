@@ -1,0 +1,59 @@
+div {
+  width: 100px;
+  height: 100px;
+}
+
+#outer {
+  width:200px;
+  height:200px;
+}
+
+#first {
+  background-color: blue;
+  animation: example 4s ease 2s infinite alternate;
+}
+
+@keyframes example {
+  from {background-color: blue;}
+  to {background-color: purple;}
+}
+
+#basic {
+  background-color: blue;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+#per {
+  animation-name: sample;
+  animation-duration: 4s;
+  background-color: pink;
+  position: relative;
+}
+
+@keyframes sample {
+  0% {background-color: pink; left:0px; top:0px;}
+  25% {background-color: green; left: 0px; top:100px;}
+  50% {background-color: blue; left: 100px; top: 100px;}
+  75% {background-color: purple; left: 100px; top: 0px;}
+  100% {background-color: pink; left: 0px; top: 0px;}
+}
+
+#tran {
+  background: red;
+  transition: width 2s;
+}
+
+#tran:hover {
+  width: 300px;
+}
+
+#dif {
+  background: green;
+  transition: width 2s, height 4s;
+}
+
+#dif:hover {
+  width: 200px;
+  height: 50px;
+}

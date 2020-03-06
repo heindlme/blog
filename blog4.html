@@ -1,0 +1,153 @@
+<!DOCTYPE hmtl>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Animation</title>
+  <link rel=stylesheet href="style.css">
+  <link rel=stylesheet href="style4.css">
+</head>
+
+<body>
+  <h3>
+    CSS Animations
+  </h3>
+  <p>
+    CSS allows animation of HTML elements without using JavaScript or Flash! Animations allows an element to change from
+    one style to another.
+    The CSS properties as many times as you want. To do CSS animation, there must be some keyframes for the animation.
+    Keyframes control what styles that the element will have and at what point during the animation.
+  </p>
+  <p>
+    A basic example would be:
+  </p>
+  <div id="basic"></div>
+  <p>
+    The code for this animation:
+
+    <pre>
+      <code>
+      #basic {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        animation-name: example;
+        animation-duration: 4s;
+      }
+
+      @keyframes example {
+        from {background-color: blue;}
+        to {background-color: purple;}
+      }
+      </code>
+  </pre>
+    It changes the background color from blue to purple in 4 seconds. Once the animation is done, it changes back to the
+    original color.
+    More colors can be used if percentages were used in the keyframes instead of using from and to. More than one aspect
+    can be changed at each stage. An example with this would be:
+  </p>
+  <div id="outer">
+    <div id="per"></div>
+  </div>
+  <p>
+    The code for this animation:
+    <pre>
+      <code>
+        #per {
+          width: 100px;
+          height: 100px;
+          animation-name: sample;
+          animation-duration: 4s;
+          background-color: pink;
+          position: relative;
+        }     
+
+        @keyframes sample {
+          0% {background-color: pink; left:0px; top:0px;}
+          25% {background-color: green; left: 0px; top:100px;}
+          50% {background-color: blue; left: 100px; top: 100px;}
+          75% {background-color: purple; left: 100px; top: 0px;}
+          100% {background-color: pink; left: 0px; top: 0px;}
+        }
+      </code>
+    </pre>
+    There are many other attributes that can be used with animations, like delaying the animation, setting how many times the animation
+    should run. The animation could run in reverse or alternate forward and backwards. The timing could change to have slower and faster parts.
+    By default, the animation will only impact the element during the keyframes, bu that can be overridden with fill-mode. There is shorthand
+    for animaiton with the format of name, duration, timeing-function, delay, iteration count, then direction.
+    An example with many of these properties is:
+  </p>
+  <div id="first"></div>
+  <p>
+    The code used for this is:
+    <pre>
+      <code>
+        #first {
+          width: 100px;
+          height: 100px;
+          background-color: blue;
+          animation: example 4s ease 2s infinite alternate;
+        }
+
+        @keyframes example {
+          from {background-color: blue;}
+          to {background-color: purple;}
+        }
+      </code>
+    </pre>
+    It switches different background colors on a loop.
+  </p>
+  <h3>CSS Transitions</h3>
+  <p>
+    CSS transitions allow changes to the property values over a given duration. To use transitions, the CSS property and the duration must be specified.
+    An example that changes the width when hovered is:
+  </p>
+  <div id="tran"></div>
+  <p>
+    The code for this is:
+    <pre>
+      <code>
+        #tran {
+          width: 100px;
+          height: 100px;
+          background: red;
+          transition: width 2s;
+        }
+        
+        #tran:hover {
+          width: 300px;
+        }
+      </code>
+    </pre>
+    When the curser isn't hovering over it, it resumes its original shape. The transitions do not have to be the same duration.
+  </p>
+  <div>
+    <div id="dif"></div>
+  </div>
+  <p>
+    Notice how it takes longer for the width to change than the height. This is done with the code:
+    <pre>
+      <code>
+        #dif {
+          width: 100px;
+          height: 100px;
+          background: green;
+          transition: width 2s, height 4s;
+        }
+        
+        #dif:hover {
+          width: 200px;
+          height: 50px;
+        }
+      </code>
+    </pre>
+    Other things that can be with transition is timing and delay, the same as animation. Animations and transitions are similar, but 
+    transitions are usually based on an action, like hover or click, where animations have more control over when they are animating.
+  </p>
+  <p>
+    Sources: <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">1</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">2</a>, 
+    <a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">3</a>
+  </p>
+</body>
+
+</html>
